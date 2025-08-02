@@ -1,0 +1,46 @@
+### Register User
+POST http://localhost:4999/auth/register
+Content-Type: application/json
+
+{
+  "email": "applicant@email.com",
+  "password": "123456"
+}
+
+
+### Login User
+POST http://localhost:4999/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@email.com",
+  "password": "yourpassword"
+}
+
+### Login User Applicant
+POST http://localhost:4999/auth/login
+Content-Type: application/json
+
+{
+  "email": "applicant@email.com",
+  "password": "123456"
+}
+
+### Create Application
+POST http://localhost:4999/applications
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoiYXBwbGljYW50QGVtYWlsLmNvbSIsInJvbGUiOiJhcHBsaWNhbnQiLCJpYXQiOjE3NTQxNDg5NzEsImV4cCI6MTc1NDIzNTM3MX0.1PQGWbPG9xySJKAjkdyYPCNrz2NLj6oxLBjch5o7cXk
+
+{
+  "businessName": "Acme Corp",
+  "registrationNumber": "ABC124",
+  "dateOfIncorporation": "2022-01-15",
+  "businessType": "Private Limited",
+  "address": "123 Main Street, City, Country",
+  "contactEmail": "contact@acmecorp.com",
+  "contactPhone": "+1234567890",
+  "directorNames": ["John Doe", "Jane Smith"],
+  "paidUpCapital": 1000000.00,
+  "licenseType": "Type A"
+}
+
